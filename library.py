@@ -27,6 +27,14 @@ def main():
 
         if choice == "1":
             add_book()
+        elif choice == "2":
+            if not books:
+                print("No books in the library.")
+            else:
+                print("\nBooks in the library:")
+                for title, info in books.items():
+                    status = "Available" if info["available"] else "Checked out"
+                    print(f'"{title}" by {info["author"]} - {status}')
         elif choice == "0":
             print("Goodbye!")
             break
