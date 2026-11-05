@@ -19,7 +19,18 @@ def show_menu():
     print("1. Add book")
     print("2. List books")
     print("0. Exit")
-
+    
+    
+def return_book():
+    title = input("Title: ").strip()
+    if title not in books:
+        print(f'No book titled "{title}".')
+    elif books[title]["available"]:
+        print(f'"{title}" is not borrowed.')
+    else:
+        books[title]["available"] = True
+        print(f'You returned "{title}".')
+        
 def main():
     while True:
         show_menu()
