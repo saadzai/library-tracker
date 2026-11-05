@@ -13,7 +13,7 @@ def add_book():
         }
         print(f'Added "{title}".')
 
-        
+
 def show_menu():
     print("\n=== Library Tracker ===")
     print("1. Add book")
