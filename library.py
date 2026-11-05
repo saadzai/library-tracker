@@ -12,17 +12,22 @@ def add_book():
             "available": True
         }
         print(f'Added "{title}".')
+
+        
 def show_menu():
     print("\n=== Library Tracker ===")
+    print("1. Add book")
+    print("2. List books")
     print("0. Exit")
-
 
 def main():
     while True:
         show_menu()
         choice = input("Choose an option: ")
 
-        if choice == "0":
+        if choice == "1":
+            add_book()
+        elif choice == "0":
             print("Goodbye!")
             break
         else:
