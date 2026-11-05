@@ -1,10 +1,17 @@
+books = {}  
 
-# library.py
-# A simple command-line library tracker.
+def add_book():
+    title = input("Title: ").strip()
+    author = input("Author: ").strip()
 
-books = {}  # title -> {"author": str, "available": bool}
-
-
+    if title in books:
+        print(f'"{title}" is already in the library.')
+    else:
+        books[title] = {
+            "author": author,
+            "available": True
+        }
+        print(f'Added "{title}".')
 def show_menu():
     print("\n=== Library Tracker ===")
     print("0. Exit")
